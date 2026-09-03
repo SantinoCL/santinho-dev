@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
-import { Onest } from "next/font/google";
+import { Instrument_Sans, Inter } from "next/font/google";
 import "@designcodeio/threeui/style.css";
 import "./globals.css";
 
-const onest = Onest({
-  variable: "--font-onest",
+const instrumentSans = Instrument_Sans({
+  variable: "--font-instrument",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+});
+
+const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+  weight: ["400", "500"],
 });
 
 export const metadata: Metadata = {
@@ -17,8 +24,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="es" className={`${onest.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">{children}</body>
+    <html lang="es" className={`${instrumentSans.variable} ${inter.variable} antialiased`}>
+      <body>{children}</body>
     </html>
   );
 }
