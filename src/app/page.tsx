@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { PredictiveArcCanvas } from "@designcodeio/threeui";
 
 const GITHUB_URL = "https://github.com/SantinoCL";
 
@@ -123,7 +124,9 @@ export default function Home() {
 
   return (
     <>
-      <div id="bg" aria-hidden="true" />
+      <div id="bg" aria-hidden="true">
+        <PredictiveArcCanvas mode="dark" speed={0.7} brightness={0.85} />
+      </div>
       <div id="vignette" aria-hidden="true" />
       <div id="grain" aria-hidden="true" />
       <div className="cur-dot" ref={cursorRef} />

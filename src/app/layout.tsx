@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Onest } from "next/font/google";
+import "@designcodeio/threeui/style.css";
 import "./globals.css";
 
 const onest = Onest({
