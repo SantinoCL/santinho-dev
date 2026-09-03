@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { PredictiveArcCanvas } from "@designcodeio/threeui";
+import Image from "next/image";
 
 const GITHUB_URL = "https://github.com/SantinoCL";
 
@@ -124,20 +124,14 @@ export default function Home() {
 
   return (
     <>
-      <div id="bg" aria-hidden="true">
-        <PredictiveArcCanvas mode="dark" speed={0.7} brightness={0.85} />
-      </div>
+      <div id="bg" aria-hidden="true" />
       <div id="vignette" aria-hidden="true" />
       <div id="grain" aria-hidden="true" />
       <div className="cur-dot" ref={cursorRef} />
 
       <header className="nav" ref={navRef}>
         <a className="brand" href="#top" data-cursor>
-          <span className="brand-mark">S</span>
-          <span className="brand-tx">
-            <b>SANTINO</b>
-            <i>FULL-STACK DEV</i>
-          </span>
+          <Image src="/logo-full.png" alt="Santinho.dev" width={1815} height={268} className="brand-logo" priority />
         </a>
         <nav className="nav-links">
           <a className="nav-link" href="#trabajo" data-cursor>Trabajo</a>
@@ -264,8 +258,7 @@ export default function Home() {
           <div className="foot-grid">
             <div className="foot-brand">
               <span className="brand">
-                <span className="brand-mark">S</span>
-                <span className="brand-tx"><b>SANTINO</b></span>
+                <Image src="/logo-full.png" alt="Santinho.dev" width={1815} height={268} className="brand-logo" />
               </span>
               <p>Desarrollador full-stack construyendo SaaS multi-tenant para organizaciones reales.</p>
             </div>

@@ -156,15 +156,8 @@ img {
 .nav.stuck::after { opacity: 1; }
 .nav.hide { transform: translate3d(0, -101%, 0); }
 .brand { display: flex; align-items: center; gap: 11px; flex: 0 0 auto; }
-.brand-mark {
-  width: 34px; height: 34px; border-radius: 50%;
-  background: var(--vermilion); color: #fff;
-  display: grid; place-items: center;
-  font-size: 15px; font-weight: 500;
-}
-.brand-tx { display: flex; flex-direction: column; line-height: 1; gap: 3px; }
-.brand-tx b { font-size: 12px; font-weight: 500; letter-spacing: 0.26em; }
-.brand-tx i { font-style: normal; font-size: 8px; letter-spacing: 0.34em; color: var(--muted); }
+.brand-logo { height: 18px; width: auto; }
+.foot-brand .brand-logo { height: 22px; }
 .nav-links { display: flex; gap: clamp(18px, 2.6vw, 46px); margin-left: auto; }
 .nav-link {
   position: relative;
